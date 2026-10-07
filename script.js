@@ -275,10 +275,6 @@
             return `${mins}:${secs.toString().padStart(2, '0')}`;
         }
         
-        function openVideo() {
-            alert('Video player opening...');
-        }
-        
         function handleSubscribe(e) {
             e.preventDefault();
             const btn = e.target.querySelector('.newsletter-btn');
@@ -312,5 +308,64 @@
             if (e.code === 'Escape' && player.classList.contains('active')) {
                 closePlayer();
             }
+        });
+
+        const musicScroller = document.querySelector('.apple-music-scroll');
+        const musicScrollButtons = document.querySelectorAll('.music-scroll-arrow');
+
+        if (musicScroller && musicScrollButtons.length) {
+            const updateMusicScrollButtons = () => {
+                const maxScroll = musicScroller.scrollWidth - musicScroller.clientWidth;
+                musicScrollButtons.forEach(button => {
+                    const direction = Number(button.dataset.direction);
+                    button.disabled = direction < 0
+                        ? musicScroller.scrollLeft <= 1
+                        : musicScroller.scrollLeft >= maxScroll - 1;
+                });
+            };
+
+            musicScrollButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const firstEmbed = musicScroller.querySelector('.apple-music-embed');
+                    const gap = parseFloat(getComputedStyle(musicScroller).gap) || 0;
+                    const scrollDistance = firstEmbed.getBoundingClientRect().width + gap;
+                    musicScroller.scrollBy({
+                        left: Number(button.dataset.direction) * scrollDistance,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            musicScroller.addEventListener('scroll', updateMusicScrollButtons, { passive: true });
+            window.addEventListener('resize', updateMusicScrollButtons);
+            updateMusicScrollButtons();
+        }
+
+        document.querySelectorAll('[data-merch-product]').forEach(product => {
+            const featuredVideo = product.querySelector('.merch-featured-video');
+            const featuredImage = product.querySelector('.merch-featured-image');
+            const thumbnails = product.querySelectorAll('.merch-thumbnail');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    const showVideo = thumbnail.dataset.media === 'video';
+                    featuredVideo.hidden = !showVideo;
+                    featuredImage.hidden = showVideo;
+
+                    if (showVideo) {
+                        featuredVideo.load();
+                    } else {
+                        featuredVideo.pause();
+                        featuredImage.src = thumbnail.dataset.image;
+                        featuredImage.alt = thumbnail.dataset.alt;
+                    }
+
+                    thumbnails.forEach(option => {
+                        const isSelected = option === thumbnail;
+                        option.classList.toggle('is-active', isSelected);
+                        option.setAttribute('aria-pressed', String(isSelected));
+                    });
+                });
+            });
         });
   

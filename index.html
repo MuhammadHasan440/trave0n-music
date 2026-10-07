@@ -35,8 +35,10 @@
         <ul class="nav-links">
             <li><a href="#music" class="nav-link">Music</a></li>
             <li><a href="#videos" class="nav-link">Videos</a></li>
+            <li><a href="#featured" class="nav-link">Featured</a></li>
             <li><a href="#tour" class="nav-link">Tour</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#merch" class="nav-link">Merch</a></li>
         </ul>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             <span></span>
@@ -50,15 +52,17 @@
         <ul class="fullscreen-menu-links">
             <li><a href="#music" class="fullscreen-menu-link">Music</a></li>
             <li><a href="#videos" class="fullscreen-menu-link">Videos</a></li>
+            <li><a href="#featured" class="fullscreen-menu-link">Featured</a></li>
             <li><a href="#tour" class="fullscreen-menu-link">Tour</a></li>
             <li><a href="#about" class="fullscreen-menu-link">About</a></li>
+            <li><a href="#merch" class="fullscreen-menu-link">Merch</a></li>
         </ul>
     </div>
 
     <!-- Hero Section - FULL IMAGE DISPLAY -->
     <section class="hero">
         <div class="hero-bg">
-            <img src="images/traveon.webp" alt="TraveOn" class="hero-bg-image" onerror="this.style.display='none'">
+            <img src="images/Spiritual%20Gangsta_%20Halo%20of%20Ashes.png" alt="Spiritual Gangsta: Halo of Ashes artwork by TraveOn" class="hero-bg-image" onerror="this.style.display='none'">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -104,82 +108,91 @@
             <a href="#" class="view-all">View All</a>
         </div>
         
-        <div class="music-grid">
-            <div class="track-card reveal" onclick="playTrack('what-you-want')" data-track="what-you-want">
-                <div class="track-card-image">
-                    <div class="album-art" style="background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%);">
-                        WHAT YOU WANT
-                    </div>
-                    <div class="track-overlay">
-                        <button class="play-button" onclick="event.stopPropagation(); playTrack('what-you-want')">▶</button>
-                    </div>
-                </div>
-                <div class="track-info">
-                    <div class="track-number">01</div>
-                    <h3 class="track-title">WHAT YOU WANT</h3>
-                    <div class="track-meta">
-                        <span>Single</span>
-                        <span class="track-duration">2:53</span>
-                    </div>
-                </div>
+        <div class="apple-music-carousel">
+            <div class="apple-music-controls">
+                <button class="music-scroll-arrow" type="button" data-direction="-1" aria-label="Scroll songs left" title="Previous songs">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+                </button>
+                <button class="music-scroll-arrow" type="button" data-direction="1" aria-label="Scroll songs right" title="Next songs">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+                </button>
             </div>
+            <div class="apple-music-scroll">
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/love-is-war-single/6776880837"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/long-way-home-single/1826668693"></iframe>
+            </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/i-wish-that-i-had-you-feat-traveon-single/1774750253"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/let-it-go-single-feat-sixx-john-verbal-single/1755012696"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/wait-single/6776801438"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/amen-feat-traveon-single/1483717931"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/roll-another-one-single/1827220640"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/chess-single/1841785676"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/supreme-hustle-single/1834583333"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/my-brother-feat-precy-single/1841932367"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/lucci-single/1833340345"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/no-fear-single-feat-ghostface-killah-traveon-single/1756307616"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/woke-extended-version/1492173726"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/black-boy-single/1842157613"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/for-my-daughters-single/1844998528"></iframe>
+        </div>
+        <div class="apple-music-embed reveal">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/style-free-single-feat-shawn-lett-single/1751621938"></iframe>
+        </div>
+        </div>
+    </section>
 
-            <div class="track-card reveal" onclick="playTrack('good-4-each-other')" data-track="good-4-each-other" style="transition-delay: 0.1s;">
-                <div class="track-card-image">
-                    <div class="album-art" style="background: linear-gradient(135deg, #0d0d0d 0%, #ff0000 100%); font-size: 0.65rem;">
-                        GOOD 4 EACH OTHER
-                    </div>
-                    <div class="track-overlay">
-                        <button class="play-button" onclick="event.stopPropagation(); playTrack('good-4-each-other')">▶</button>
-                    </div>
-                </div>
-                <div class="track-info">
-                    <div class="track-number">02</div>
-                    <h3 class="track-title">GOOD 4 EACH OTHER</h3>
-                    <div class="track-meta">
-                        <span>Single</span>
-                        <span class="track-duration">3:15</span>
-                    </div>
+    <!-- Bandcamp Section -->
+    <section class="section bandcamp-section" id="spiritual-gangsta">
+        <div class="bandcamp-section-container">
+            <div class="section-header reveal">
+                <div>
+                    <span class="section-label">Available on Bandcamp</span>
+                    <h2 class="section-title text-gradient">Spiritual Gangsta</h2>
                 </div>
             </div>
-
-            <div class="track-card reveal" onclick="playTrack('never')" data-track="never" style="transition-delay: 0.2s;">
-                <div class="track-card-image">
-                    <div class="album-art" style="background: linear-gradient(135deg, #2d0000 0%, #000000 100%);">
-                        NEVER
+            <article class="bandcamp-track-card reveal">
+                <a class="bandcamp-artwork-link" href="https://traveon.bandcamp.com/track/spiritual-gangsta" target="_blank" rel="noopener noreferrer" aria-label="Open Spiritual Gangsta on Bandcamp">
+                    <img src="images/image12.png" alt="Spiritual Gangsta artwork by Traveon" loading="lazy">
+                </a>
+                <div class="bandcamp-track-info">
+                    <div>
+                        <h3>Spiritual Gangsta</h3>
+                        <p>Digital track by Traveon</p>
                     </div>
-                    <div class="track-overlay">
-                        <button class="play-button" onclick="event.stopPropagation(); playTrack('never')">▶</button>
-                    </div>
+                    <a class="bandcamp-buy-link" href="https://traveon.bandcamp.com/track/spiritual-gangsta" target="_blank" rel="noopener noreferrer" aria-label="Buy Spiritual Gangsta on Bandcamp, starting at $1.99">
+                        <span>Buy on Bandcamp</span>
+                        <strong>$1.99+</strong>
+                    </a>
                 </div>
-                <div class="track-info">
-                    <div class="track-number">03</div>
-                    <h3 class="track-title">NEVER</h3>
-                    <div class="track-meta">
-                        <span>Single</span>
-                        <span class="track-duration">3:30</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="track-card reveal" onclick="playTrack('black-boy')" data-track="black-boy" style="transition-delay: 0.3s;">
-                <div class="track-card-image">
-                    <div class="album-art" style="background: linear-gradient(135deg, #1a0000 0%, #4a0000 100%);">
-                        BLACK BOY
-                    </div>
-                    <div class="track-overlay">
-                        <button class="play-button" onclick="event.stopPropagation(); playTrack('black-boy')">▶</button>
-                    </div>
-                </div>
-                <div class="track-info">
-                    <div class="track-number">04</div>
-                    <h3 class="track-title">BLACK BOY</h3>
-                    <div class="track-meta">
-                        <span>2025</span>
-                        <span class="track-duration">4:00</span>
-                    </div>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -192,11 +205,90 @@
             </div>
         </div>
         
-        <div class="video-container reveal" onclick="openVideo()">
-            <div class="video-placeholder">
-                <div class="video-title">WHAT YOU WANT</div>
+        <div class="video-container reveal">
+            <video controls playsinline preload="metadata" poster="images/image13.jpeg">
+                <source src="videos/Video_2.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="section-header reveal">
+            <div>
+                <span class="section-label">Behind The Music</span>
+                <h2 class="section-title text-gradient">Gallery</h2>
             </div>
-            <div class="video-play"></div>
+        </div>
+
+        <div class="gallery-grid">
+            <a class="gallery-item reveal" href="images/image12.png" target="_blank" rel="noopener" aria-label="Open Spiritual Gangsta artwork">
+                <img src="images/image12.png" alt="Spiritual Gangsta artwork by TraveOn">
+            </a>
+            <a class="gallery-item reveal" href="images/image13.jpeg" target="_blank" rel="noopener" aria-label="Open photo of TraveOn at a live event">
+                <img src="images/image13.jpeg" alt="TraveOn at a live event under purple stage lights">
+            </a>
+            <a class="gallery-item reveal" href="images/image14.jpeg" target="_blank" rel="noopener" aria-label="Open backstage photo of TraveOn">
+                <img src="images/image14.jpeg" alt="TraveOn backstage at an outdoor event">
+            </a>
+            <a class="gallery-item reveal" href="images/image15.jpeg" target="_blank" rel="noopener" aria-label="Open photo of TraveOn with event guests">
+                <img src="images/image15.jpeg" alt="TraveOn with guests at an outdoor night event">
+            </a>
+            <a class="gallery-item reveal" href="images/image16.jpeg" target="_blank" rel="noopener" aria-label="Open group photo at a night event">
+                <img src="images/image16.jpeg" alt="Group photo at an outdoor night event">
+            </a>
+            <a class="gallery-item reveal" href="images/image17.jpeg" target="_blank" rel="noopener" aria-label="Open photo of TraveOn with friends">
+                <img src="images/image17.jpeg" alt="TraveOn with friends at a live event">
+            </a>
+            <a class="gallery-item reveal" href="images/image18.jpeg" target="_blank" rel="noopener" aria-label="Open group photo backstage">
+                <img src="images/image18.jpeg" alt="Group gathered backstage at an outdoor event">
+            </a>
+            <a class="gallery-item reveal" href="images/image19.jpeg" target="_blank" rel="noopener" aria-label="Open candid photo at a live event">
+                <img src="images/image19.jpeg" alt="Candid group photo under purple lights at a live event">
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="section featured-section" id="featured">
+        <div class="featured-container">
+            <div class="section-header reveal">
+                <div>
+                    <span class="section-label">Press & Recognition</span>
+                    <h2 class="section-title text-gradient">Featured</h2>
+                </div>
+            </div>
+
+            <div class="featured-list">
+                <article class="featured-item reveal">
+                    <img class="featured-thumbnail" src="images/traveon.webp" alt="TraveOn portrait">
+                    <div class="featured-copy">
+                        <span class="featured-badge">Featured</span>
+                        <h3>Traveon: West Coast Grit, Purpose, and a Voice for the Youth</h3>
+                    </div>
+                </article>
+                <article class="featured-item reveal">
+                    <div class="featured-thumbnail featured-art featured-art-attention" role="img" aria-label="Editorial artwork for ATTENTION by Rom Lawrell">
+                        <span>ATTENTION</span>
+                        <small>ROM LAWRELL</small>
+                    </div>
+                    <div class="featured-copy">
+                        <span class="featured-badge">Featured</span>
+                        <h3>Discover ‘ATTENTION’: Rom Lawrell’s Empowering Anthem</h3>
+                    </div>
+                </article>
+                <article class="featured-item reveal">
+                    <div class="featured-thumbnail featured-art featured-art-chicago" role="img" aria-label="Editorial artwork for Chicago’s creative scene">
+                        <span>CHI</span>
+                        <small>CREATIVE SCENE</small>
+                    </div>
+                    <div class="featured-copy">
+                        <span class="featured-badge">Featured</span>
+                        <h3>Cheerrio: From Struggles to Success in Chicago’s Creative Scene</h3>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -269,11 +361,11 @@
                 </div>
                 
                 <div class="about-content reveal">
-                    <span class="section-label">The Artist</span>
-                    <h2 class="section-title" style="margin-bottom: 1.2rem;">Breaking<br>Boundaries</h2>
+                    <span class="section-label">The Story</span>
+                    <h2 class="section-title about-title">A voice found early</h2>
                     <div class="about-text">
-                        <p>TraveOn represents the new wave of hip-hop artistry. Based in California, his sound merges raw emotional depth with innovative production.</p>
-                        <p>From viral moments on TikTok to sold-out shows across the country, TraveOn has established himself as a voice for the new generation.</p>
+                        <p>His music journey began when he was just 12 years old. At that age, most kids are still figuring themselves out — but Traveon had already found a voice. Inspired by Ice Cube and Mobb Deep, he was drawn to raw storytelling, sharp lyricism, and unapologetic truth. The way those artists painted vivid pictures of their environments resonated deeply with him. Their music wasn’t fantasy — it was testimony. And that’s the lane he gravitated toward.</p>
+                        <p>As he developed his sound, his influences expanded. Wu-Tang Clan’s gritty lyricism, Nas’ poetic storytelling, Nipsey Hussle’s entrepreneurial mindset, and Ghostface Killah’s authenticity all played roles in shaping his artistry. These weren’t just artists to him — they were blueprints. They showed him that real rap still mattered. That substance could coexist with success. That you could represent your roots and still elevate.</p>
                     </div>
                     
                     <div class="stats">
@@ -291,6 +383,45 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merch Section -->
+    <section class="section merch-section" id="merch">
+        <div class="merch-container">
+            <div class="section-header reveal">
+                <div>
+                    <span class="section-label">Wear The Story</span>
+                    <h2 class="section-title text-gradient">Merch</h2>
+                </div>
+            </div>
+
+            <div class="merch-grid merch-grid-single">
+                <article class="merch-product reveal" data-merch-product>
+                    <div class="merch-gallery">
+                        <div class="merch-featured-media">
+                            <video class="merch-featured-video" controls playsinline preload="metadata" poster="images/merch/image7.jpeg">
+                                <source src="videos/Video_1.mp4" type="video/mp4">
+                                Your browser does not support video playback.
+                            </video>
+                            <img class="merch-featured-image" src="images/merch/image7.jpeg" alt="Spiritual Gangsta tie-dye and green tops" loading="lazy" decoding="async" hidden>
+                        </div>
+                        <div class="merch-thumbnails" aria-label="Spiritual Gangsta apparel photos">
+                            <button class="merch-thumbnail merch-video-thumbnail is-active" type="button" data-media="video" aria-label="Show merch video" aria-pressed="true"><img src="images/merch/image7.jpeg" alt="" loading="lazy"><span class="merch-video-thumbnail-icon" aria-hidden="true">&#9654;</span></button>
+                            <button class="merch-thumbnail" type="button" data-media="image" data-image="images/merch/image7.jpeg" data-alt="Spiritual Gangsta tie-dye and green tops" aria-label="Show apparel photo 1" aria-pressed="false"><img src="images/merch/image7.jpeg" alt="" loading="lazy"></button>
+                            <button class="merch-thumbnail" type="button" data-media="image" data-image="images/merch/image8.jpeg" data-alt="Close view of the Spiritual Gangsta tops" aria-label="Show apparel photo 2" aria-pressed="false"><img src="images/merch/image8.jpeg" alt="" loading="lazy"></button>
+                            <button class="merch-thumbnail" type="button" data-media="image" data-image="images/merch/image9.jpeg" data-alt="Spiritual Gangsta apparel displayed on hangers" aria-label="Show apparel photo 3" aria-pressed="false"><img src="images/merch/image9.jpeg" alt="" loading="lazy"></button>
+                            <button class="merch-thumbnail" type="button" data-media="image" data-image="images/merch/image10.jpeg" data-alt="Alternate view of the Spiritual Gangsta tops" aria-label="Show apparel photo 4" aria-pressed="false"><img src="images/merch/image10.jpeg" alt="" loading="lazy"></button>
+                            <button class="merch-thumbnail" type="button" data-media="image" data-image="images/merch/image11.jpeg" data-alt="Back view of the Spiritual Gangsta apparel" aria-label="Show apparel photo 5" aria-pressed="false"><img src="images/merch/image11.jpeg" alt="" loading="lazy"></button>
+                        </div>
+                    </div>
+                    <div class="merch-product-info">
+                        <span class="merch-product-label">Spiritual Gangsta</span>
+                        <h3 class="merch-product-title">Signature Tops</h3>
+                        <p class="merch-product-description">Tie-dye and deep-green pieces, shown from multiple angles.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -340,7 +471,7 @@
                 <h4 class="footer-title">Connect</h4>
                 <ul class="footer-links">
                     <li class="footer-link"><a href="#">Tour</a></li>
-                    <li class="footer-link"><a href="#">Merch</a></li>
+                    <li class="footer-link"><a href="#merch">Merch</a></li>
                     <li class="footer-link"><a href="#">Contact</a></li>
                 </ul>
             </div>
