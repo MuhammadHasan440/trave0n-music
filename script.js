@@ -173,10 +173,6 @@
             startProgress();
         }
         
-        function playLatest() {
-            playTrack('what-you-want');
-        }
-        
         function closePlayer() {
             player.classList.remove('active');
             isPlaying = false;

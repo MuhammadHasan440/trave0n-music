@@ -36,7 +36,7 @@
             <li><a href="#music" class="nav-link">Music</a></li>
             <li><a href="#videos" class="nav-link">Videos</a></li>
             <li><a href="#featured" class="nav-link">Featured</a></li>
-            <li><a href="#tour" class="nav-link">Tour</a></li>
+            <li><a href="#shows" class="nav-link">Shows</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#merch" class="nav-link">Merch</a></li>
         </ul>
@@ -53,7 +53,7 @@
             <li><a href="#music" class="fullscreen-menu-link">Music</a></li>
             <li><a href="#videos" class="fullscreen-menu-link">Videos</a></li>
             <li><a href="#featured" class="fullscreen-menu-link">Featured</a></li>
-            <li><a href="#tour" class="fullscreen-menu-link">Tour</a></li>
+            <li><a href="#shows" class="fullscreen-menu-link">Shows</a></li>
             <li><a href="#about" class="fullscreen-menu-link">About</a></li>
             <li><a href="#merch" class="fullscreen-menu-link">Merch</a></li>
         </ul>
@@ -71,12 +71,12 @@
                 <span class="hero-title-text">TRAVEON</span>
             </h1>
             <div class="hero-cta">
-                <button class="btn btn-primary" onclick="playLatest()">
+                <a class="btn btn-primary" href="#music">
                     <span>Listen Now</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
                     </svg>
-                </button>
+                </a>
                 <a href="#videos" class="btn btn-secondary">Watch Video</a>
             </div>
         </div>
@@ -292,58 +292,41 @@
         </div>
     </section>
 
-    <!-- Tour Section -->
-    <section class="section" id="tour">
+    <!-- Shows Section -->
+    <section class="section" id="shows">
         <div class="section-header reveal">
             <div>
-                <span class="section-label">On The Road</span>
-                <h2 class="section-title text-gradient">Tour Dates</h2>
+                <span class="section-label">On Stage</span>
+                <h2 class="section-title text-gradient">Shows</h2>
             </div>
-            <a href="#" class="view-all">All Dates</a>
         </div>
         
         <div class="tour-list reveal">
-            <div class="tour-item" onclick="window.open('#', '_blank')">
-                <div class="tour-date">MAR 15</div>
+            <div class="tour-item">
+                <div class="tour-date">
+                    <span>NOV 08</span>
+                    <small class="show-year">2026</small>
+                </div>
                 <div>
-                    <div class="tour-city">Los Angeles, CA</div>
-                    <div class="tour-venue">The Forum</div>
+                    <div class="tour-city">TraveOn Live</div>
+                    <div class="tour-venue">San Bernardino County Fairgrounds</div>
                 </div>
                 <div class="tour-status">
-                    <span class="status-badge">Tickets</span>
+                    <span class="status-badge">Show</span>
                 </div>
             </div>
             
             <div class="tour-item">
-                <div class="tour-date">MAR 22</div>
+                <div class="tour-date">
+                    <span>NOV 14</span>
+                    <small class="show-year">2026</small>
+                </div>
                 <div>
-                    <div class="tour-city">New York, NY</div>
-                    <div class="tour-venue">Madison Square Garden</div>
+                    <div class="tour-city">TraveOn Live</div>
+                    <div class="tour-venue">San Bernardino County Fairgrounds</div>
                 </div>
                 <div class="tour-status">
-                    <span class="status-badge sold-out">Sold Out</span>
-                </div>
-            </div>
-            
-            <div class="tour-item" onclick="window.open('#', '_blank')">
-                <div class="tour-date">APR 05</div>
-                <div>
-                    <div class="tour-city">Chicago, IL</div>
-                    <div class="tour-venue">United Center</div>
-                </div>
-                <div class="tour-status">
-                    <span class="status-badge">Tickets</span>
-                </div>
-            </div>
-            
-            <div class="tour-item" onclick="window.open('#', '_blank')">
-                <div class="tour-date">APR 12</div>
-                <div>
-                    <div class="tour-city">Miami, FL</div>
-                    <div class="tour-venue">American Airlines Arena</div>
-                </div>
-                <div class="tour-status">
-                    <span class="status-badge">Tickets</span>
+                    <span class="status-badge">Show</span>
                 </div>
             </div>
         </div>
@@ -426,19 +409,6 @@
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter" id="contact">
-        <div class="newsletter-content">
-            <h2 class="newsletter-title">Join The Movement</h2>
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 0.5rem;">Get exclusive access to new music and tour dates.</p>
-            
-            <form class="newsletter-form" onsubmit="handleSubscribe(event)">
-                <input type="email" class="newsletter-input" placeholder="Your email address" required>
-                <button type="submit" class="newsletter-btn">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-grid">
@@ -470,7 +440,7 @@
             <div>
                 <h4 class="footer-title">Connect</h4>
                 <ul class="footer-links">
-                    <li class="footer-link"><a href="#">Tour</a></li>
+                    <li class="footer-link"><a href="#shows">Shows</a></li>
                     <li class="footer-link"><a href="#merch">Merch</a></li>
                     <li class="footer-link"><a href="#">Contact</a></li>
                 </ul>
@@ -491,15 +461,8 @@
         </div>
     </footer>
 
-    <!-- Fixed Music Player with Close Button -->
+    <!-- Fixed Music Player -->
     <div class="music-player" id="musicPlayer">
-        <button class="player-close" onclick="closePlayer()" aria-label="Close player">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-        
         <div class="player-container">
             <div class="player-track">
                 <div class="player-art" id="playerArt">

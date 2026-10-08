@@ -1162,7 +1162,6 @@
             padding: 1.2rem 1rem;
             background: var(--black);
             transition: all 0.3s;
-            cursor: pointer;
         }
 
         .tour-item:active {
@@ -1170,10 +1169,19 @@
         }
 
         .tour-date {
+            display: flex;
+            flex-direction: column;
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.1rem;
             color: var(--primary);
             line-height: 1;
+        }
+
+        .show-year {
+            margin-top: 0.3rem;
+            color: var(--gray);
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.5rem;
         }
 
         .tour-city {
@@ -1430,33 +1438,73 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 0.8rem;
-            margin-top: 1rem;
+            align-items: center;
+            gap: 0.9rem;
+            margin-top: 1.25rem;
         }
 
         .social-link {
-            width: 42px;
-            height: 42px;
-            border: 1px solid var(--gray-dark);
+            position: relative;
+            display: grid;
+            width: 54px;
+            height: 54px;
+            place-items: center;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: var(--white);
+            background: linear-gradient(145deg, #1b1b1b, #090909);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 20px rgba(0, 0, 0, 0.28);
             text-decoration: none;
-            transition: all 0.3s;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .social-link::before {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: var(--social-accent);
+            content: '';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .social-link:nth-child(1) {
+            --social-accent: #25f4ee;
+            --social-glow: rgba(37, 244, 238, 0.2);
+        }
+
+        .social-link:nth-child(2) {
+            --social-accent: #ff1744;
+            --social-glow: rgba(255, 23, 68, 0.22);
+        }
+
+        .social-link:nth-child(3) {
+            --social-accent: #e1306c;
+            --social-glow: rgba(225, 48, 108, 0.22);
         }
 
         .social-link svg {
-            width: 18px;
-            height: 18px;
+            position: relative;
+            z-index: 1;
+            width: 21px;
+            height: 21px;
             fill: currentColor;
         }
 
         .social-link:hover {
-            border-color: var(--primary);
-            background: var(--primary);
-            transform: translateY(-3px);
+            border-color: var(--social-accent);
+            box-shadow: 0 10px 24px var(--social-glow), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .social-link:hover::before {
+            opacity: 0.16;
+        }
+
+        .social-link:focus-visible {
+            outline: 2px solid var(--social-accent);
+            outline-offset: 4px;
         }
 
         .footer-bottom {
@@ -1494,35 +1542,6 @@
             align-items: center;
             gap: 0.8rem;
             position: relative;
-        }
-
-        .player-close {
-            position: absolute;
-            top: -32px;
-            right: 8px;
-            width: 28px;
-            height: 28px;
-            background: var(--black-lighter);
-            border: 1px solid var(--gray-dark);
-            border-radius: 50%;
-            color: var(--white);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            z-index: 101;
-        }
-
-        .player-close:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            transform: rotate(90deg);
-        }
-
-        .player-close svg {
-            width: 12px;
-            height: 12px;
         }
 
         .player-track {
